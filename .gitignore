@@ -36,7 +36,18 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+environment.*
 
 # System files
 .DS_Store
 Thumbs.db
+
+# Fichiers générés par Angular
+*.js
+*.js.map
+
+
+# Fichiers de configuration utilisateur VS Code
+/User
+/User/settings.json
+
