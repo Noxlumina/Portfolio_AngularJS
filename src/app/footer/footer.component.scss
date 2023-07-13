@@ -1,0 +1,20 @@
+.lien-icone {
+    margin-left: 30px;
+}
+
+.lien-icone:hover {
+    opacity: 0.5;
+}
+
+footer {
+    text-align: center;
+    background-color: white;
+    position:fixed;
+    bottom: 0;
+    margin-top: 500px;
+    padding: 10px;
+    width: 100vw;
+    flex-shrink: 0;
+    flex-grow: 0;
+    justify-content: center;
+}

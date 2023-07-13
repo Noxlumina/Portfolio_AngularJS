@@ -1,0 +1,37 @@
+<section id="contact" class="section-contact">
+    <h2>Parlons de votre projet</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="form-nom-email">
+            <div class="form-column">
+                <label for="name">Nom</label>
+                <input type="text" id="name" formControlName="name">
+                <div
+                    *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)">
+                    <div *ngIf="contactForm.controls['name'].errors">Veuillez entrer votre nom.</div>
+                </div>
+            </div>
+
+            <div class="form-column">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" formControlName="email">
+                <div
+                    *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)">
+                    <div *ngIf="contactForm.controls['email'].errors">Veuillez entrer votre adresse e-mail.</div>
+                    <div *ngIf="contactForm.controls['email'].errors">Veuillez entrer une adresse e-mail valide.</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-column">
+            <label for="message">Message</label>
+            <textarea id="message" formControlName="message" rows="10"></textarea>
+            <div
+                *ngIf="contactForm.controls['message'].invalid && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)">
+                <div *ngIf="contactForm.controls['message'].errors">Veuillez entrer un message.</div>
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="contactForm.invalid" class="cta">Envoyer</button>
+    </form>
+</section>

@@ -1,0 +1,41 @@
+.landing-block {
+    margin: 10px auto 10px;
+    width: 60%;
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+}
+
+.accueil-introduction {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    align-items: flex-start;
+    margin: 5%;
+    h1 {
+        margin-bottom: 15px;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+    div {
+        padding-right: 80px;
+        flex: 50%;
+    }
+    img {
+        width: 200px;
+    }
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    .accueil-introduction {
+        flex-direction: column;
+    }
+    .accueil-introduction img {
+        padding-top: 1rem;
+    }
+    
+}
