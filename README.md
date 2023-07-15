@@ -78,7 +78,7 @@ docker build -t angular-app .
 <ol>then just creating the container</ol>
 
 ```
-docker run -it -p 4200:4200 --name my-angular-container angular-app
+docker run -it -p 4210:80 --name my-angular-container angular-app
 ```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
