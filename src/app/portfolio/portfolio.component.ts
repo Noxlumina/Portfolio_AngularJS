@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { PortfolioService } from '../services/portfolio.service';
 import { Subject } from 'rxjs';
+import { Router, NavigationEnd } from '@angular/router';
+
 
 @Component({
   selector: 'app-portfolio',
@@ -10,12 +12,17 @@ import { Subject } from 'rxjs';
 export class PortfolioComponent implements OnInit, OnDestroy {
   private destroy$!: Subject<boolean>;
 
-  constructor(private apiService: PortfolioService) { }
+  constructor(private apiService: PortfolioService, private router: Router) { }
   Landscapes: any;
   Portrayal: any;
 
 
   ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
     this.apiService.searchPhotos('portrait').subscribe(
       data => {
         this.Portrayal = data.photos
