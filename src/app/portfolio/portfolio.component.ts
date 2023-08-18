@@ -18,11 +18,13 @@ export class PortfolioComponent implements OnInit, OnDestroy {
 
 
   ngOnInit() {
+    //redirection en haut de page lors du chargement de la page
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         window.scrollTo(0, 0);
       }
     });
+    //chargement des donnée grâce au service
     this.apiService.searchPhotos('portrait').subscribe(
       data => {
         this.Portrayal = data.photos

@@ -9,7 +9,8 @@ import { Router, NavigationEnd } from '@angular/router';
 export class HeaderComponent {
   constructor(private router: Router) { }
 
-  ngOnInit() : void {
+  ngOnInit(): void {
+    //redirection en haut de page lors du chargement de la page
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         window.scrollTo(0, 0);
