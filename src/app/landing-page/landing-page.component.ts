@@ -16,10 +16,6 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onContinue(): void {
-    this.router.navigateByUrl('facesnaps');
-  }
-
   onSubmitForm(form: NgForm) {
     console.log(form.value);
 }
