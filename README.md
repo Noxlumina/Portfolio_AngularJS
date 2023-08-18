@@ -2,21 +2,21 @@
 
 # Portfolio
 
-Portfolio <i class="fas fa-thin fa-book" style="color: #8c88af;"/></i> is a project based on an openclassroom course "Créez votre site web avec HTML5 et CSS3". During this course, it was asked to participate in the elaboration of website for Robbie Lens, a photographer <i class="fas fa-duotone fa-camera-retro"></i>. The website was created only with HTML5 and CSS3.
+"Portfolio" is a project based on an OpenClassroom course titled "Créez votre site web avec HTML5 et CSS3" (Create Your Website with HTML5 and CSS3). During this course, participants were tasked with creating a website for Robbie Lens, a photographer. The website was developed solely using HTML5 and CSS3.
 
-So I decided to take this project and turn it into angular application. This is a small project, there is no backend. The pictures from the portfolio come from pexel.
+Inspired by this project, I chose to transform it into an Angular application. While this project remains small in scope and lacks a backend, it serves as a valuable opportunity for practice and learning. The portfolio images are sourced from Pexels.
 
 ### <li>Pexel</li>
 
-An apiKey is required for using it. An account needs to be created before getting it (free).
+To utilize the application, an API key is essential. Prior to obtaining the key, an account must be created, which is offered free of charge.
 
-I have used the search api by query.
+For the functionality, I've employed the Pexels Search API using query-based searches.
 
 ### <li>EmailJS</li>
 
-For the contact form, I have used EmailJS which is a API allowing to send email without developing backend services. It's free with some limitations and some settings are mandatory before using it.
+To implement the contact form, I've integrated EmailJS, an API that enables sending emails without the need for backend development. This service is free, though it comes with certain limitations and prerequisites that must be configured before utilization.
 
-Here's how to use EmailJS with Angular:
+Below, I've outlined the steps for using EmailJS with Angular:
 
 <ol>Sign up for EmailJS (https://www.emailjs.com/) and create an account.</ol>
 <ol>Install the EmailJS package: "npm install emailjs-com"
@@ -51,7 +51,7 @@ sendEmail() {
 
 <li>Environements directory</li>
 
-For most of the api key and sensitive data I have used env files. The most easier way to achieve it for me is just to create a directory with our environment file for development and production.
+To secure sensitive data and API keys, I've employed environment files. I find the most straightforward approach is to establish separate environment files for development and production. This ensures that sensitive information remains protected while allowing for efficient management and deployment.
 
 ```
 export const environment = {
@@ -67,8 +67,7 @@ export const environment = {
 
 <li>Docker</li>
 
-I have created a Dockerfile for trying without having Angular CLI or Node.js installed on his computer. 
-
+Similarly, I've crafted a Dockerfile to facilitate testing without requiring the installation of Angular CLI or Node.js on your computer. This simplifies the process and provides a consistent environment for experimentation.
 <ol>for creating the image:</ol>
 
 ```
