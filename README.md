@@ -6,7 +6,7 @@
 
 Inspired by this project, I chose to transform it into an Angular application. While this project remains small in scope and lacks a backend, it serves as a valuable opportunity for practice and learning. The portfolio images are sourced from Pexels.
 
-Link to the demo : [Portfolio]((https://angular-projet-portfolio.vercel.app/).
+Link to the demo : [Portfolio](https://angular-projet-portfolio.vercel.app/).
 
 ### <li>Pexel</li>
 
