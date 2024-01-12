@@ -29,13 +29,13 @@ export class ContactFormComponent implements OnInit {
    */
   sendEmail(from_email: string, message: string) {
     const templateParams = {
-      to_email: process.env.to_email,
+      to_email: environment.to_email,
       from_email: from_email,
       subject: 'Demande de contact',
       message: message
     };
 
-    emailjs.send(process.env.service_id, process.env.template_id, templateParams, process.env.public_key)
+    emailjs.send(environment.service_id, environment.template_id, templateParams, environment.public_key)
       .then((response: EmailJSResponseStatus) => {
         console.log('E-mail sent successfully!', response.text);
       })
