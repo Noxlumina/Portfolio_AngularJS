@@ -45,6 +45,7 @@ Thumbs.db
 # Fichiers générés par Angular
 *.js
 *.js.map
+!config.js
 
 
 # Fichiers de configuration utilisateur VS Code
