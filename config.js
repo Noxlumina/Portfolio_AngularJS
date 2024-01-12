@@ -5,6 +5,7 @@ const setEnv = () => {
   require("dotenv").config({
     path: "src/environments/.env",
   });
+  console.log(process.env.pexelApiUrl);
   // `environment.ts` file structure
   const envConfigFile = `export const environment = {
         pexelApiUrl: '${process.env.pexelApiUrl}',
