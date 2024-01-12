@@ -10,8 +10,8 @@ import { environment } from '../../environments/environment';
     providedIn: 'root'
 })
 export class PortfolioService {
-    private apiUrl = environment.pexelApiUrl;
-    private apiKey = environment.pexelApiKey;
+    private apiUrl = process.env.pexelApiUrl;
+    private apiKey = process.env.pexelApiKey;
     constructor(private httpClient: HttpClient) { }
     
     /**
